@@ -1,5 +1,5 @@
 import HeroText from "../components/HeroText";
-import Background from "../components/ParallaxBackground";
+import Background from "../components/parallaxBackground";
 
 const Hero = () => {
   return (
