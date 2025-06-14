@@ -5,61 +5,72 @@ import { MiniRobot } from "./miniRobot";
 
 const Background = () => {
   const [animation, setAnimation] = useState("Idle");
-  const [emotion, setEmotion] = useState("Surprised");
-  const clickCountRef = useRef(0);
-  const clickTimeoutRef = useRef(null);
-  const waveIntervalRef = useRef(null);
+  const [emotion, setEmotion] = useState("Neutral");
+  const [isMobile, setIsMobile] = useState(false);
+  const robotRef = useRef();
   const canvasRef = useRef();
+  const actionIndexRef = useRef(0);
+  const intervalRef = useRef(null);
 
+  // Detect mobile devices based on window width
   useEffect(() => {
-    const handleModelClick = (e) => {
-      if (e.detail === "left") {
-        clickCountRef.current++;
-        clearTimeout(clickTimeoutRef.current);
-        clickTimeoutRef.current = setTimeout(() => {
-          const count = clickCountRef.current;
-          if (count === 1) {
-            setAnimation("Punch");
-            setEmotion("Smile"); // Happy expression with Punch
-          } else if (count === 2) {
-            setAnimation("Jump");
-            setEmotion("Surprise"); // Surprised expression with Jump
-          } else {
-            setAnimation("Death");
-            setEmotion("Frown"); // Sad expression with Death
-          }
-          clickCountRef.current = 0;
-        }, 300);
-      } else if (e.detail === "right") {
-        setAnimation("Idle");
-        setEmotion("Smile"); // Smile on right-click
-      }
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
     };
-    canvasRef.current?.addEventListener("modelClick", handleModelClick);
-    return () =>
-      canvasRef.current?.removeEventListener("modelClick", handleModelClick);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  // Cycle through actions every 3 seconds
+  useEffect(() => {
+    const actions = [
+      { animation: "Punch", emotion: "Smile" },
+      { animation: "Jump", emotion: "Surprise" },
+      { animation: "Dance", emotion: "Smile" },
+      { animation: "Idle", emotion: "Smile" },
+      { animation: "Death", emotion: "Frown" },
+    ];
+
+    const startInterval = () => {
+      intervalRef.current = setInterval(() => {
+        const currentAction = actions[actionIndexRef.current];
+        setAnimation(currentAction.animation);
+        setEmotion(currentAction.emotion);
+
+        // Pause interval for all actions to ensure 3-second minimum
+        clearInterval(intervalRef.current);
+        setTimeout(() => {
+          actionIndexRef.current = (actionIndexRef.current + 1) % actions.length;
+          startInterval();
+        }, 3000);
+      }, 3000);
+    };
+
+    startInterval();
+
+    return () => clearInterval(intervalRef.current);
+  }, []);
+
+  // Handle window blur and focus
   useEffect(() => {
     const handleBlur = () => {
+      clearInterval(intervalRef.current);
       setAnimation("Wave");
       setEmotion("Neutral");
-      waveIntervalRef.current = setInterval(() => {
-        setAnimation("Wave");
-        setEmotion("Neutral");
-      }, 2000);
     };
     const handleFocus = () => {
-      clearInterval(waveIntervalRef.current);
       setAnimation("Idle");
       setEmotion("Neutral");
+      actionIndexRef.current = 0;
+      clearInterval(intervalRef.current);
+      startInterval();
     };
     window.addEventListener("blur", handleBlur);
     window.addEventListener("focus", handleFocus);
     return () => {
       window.removeEventListener("blur", handleBlur);
       window.removeEventListener("focus", handleFocus);
-      clearInterval(waveIntervalRef.current);
     };
   }, []);
 
@@ -74,17 +85,19 @@ const Background = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
+        pointerEvents: "none",
       }}
     >
       <Canvas
         ref={canvasRef}
         camera={{ position: [0, 0, 5], fov: 50 }}
-        style={{ background: "transparent" }}
+        style={{ background: "transparent", pointerEvents: isMobile ? "none" : "auto" }}
       >
         <ambientLight intensity={0.5} />
         <directionalLight position={[10, 10, 5]} intensity={1} />
         <Suspense fallback={null}>
           <MiniRobot
+            ref={robotRef}
             animationName={animation}
             emotionName={emotion}
             onAnimationFinished={() => {
