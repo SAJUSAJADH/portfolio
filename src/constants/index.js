@@ -249,9 +249,9 @@ export const experiences = [
     ],
   },
   {
-    title: "Software Engineer",
+    title: "Junior Software Engineer",
     job: "Applications & AI Products",
-    date: "2024-Present",
+    date: "2024-2025",
     contents: [
       "Works in a robotics company specializing in the development of autonomous robots and AI powered solutions.",
       "Contributed to the design and development of AI-driven applications, including computer vision, NLP, and custom model deployments.",
@@ -259,6 +259,19 @@ export const experiences = [
       "Integrated AI functionalities such as object detection, emotion recognition, and voice command systems into real-time applications and consumer products.",
       "Collaborated on embedded AI software for innovative products like smart glasses, AI assistants, and wearable tech with hardware dependencies like Raspberry Pi.",
       "Implemented backend services using Node.js, Firebase, and Python-based APIs to support real-time data processing and cloud integration.",
+    ],
+  },
+  {
+    title: "Senior Software Engineer",
+    job: "Robots & AI Products",
+    date: "2025-Present",
+    contents: [
+      "Led the design and development of scalable, high-performance AI applications.",
+      "Directed the development, updates, and management of the company’s official employee connect mobile application, ensuring scalability and user engagement.",
+      "Lead teams for developing scalable and interactive mobile and web applications using React Native, Next.js, and Flutter.",
+      "Managed technical teams, overseeing project execution, resource allocation, and cross-functional collaboration to deliver innovative AI and robotics solutions.",
+      "Spearheaded mobile app development, integrating cutting-edge AI features.",
+      ""
     ],
   },
 ];
@@ -280,7 +293,7 @@ export const journey = [
   },
   {
     title: "Masters Degree in English Language & Literature",
-    year: "2022-present",
+    year: "2022-2025",
     content: "Pursuing Masters in English Language & Literature.",
   },
   {

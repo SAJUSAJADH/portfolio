@@ -10,12 +10,12 @@ function Navigation() {
       </li>
       <li className="nav-li">
         <a className="nav-link" href="#work">
-          Work
+          Experience
         </a>
       </li>
       <li className="nav-li">
-        <a className="nav-link" href="#work">
-          Experience
+        <a className="nav-link" href="#qualifications">
+          Qualifications
         </a>
       </li>
       <li className="nav-li">
@@ -24,8 +24,8 @@ function Navigation() {
         </a>
       </li>
       <li className="nav-li">
-        <a target="_blank" className="nav-link" href="https://sajadh.vercel.app">
-          Web 3.0
+        <a target="_blank" className="nav-link" href="https://sajadhweb3.vercel.app/">
+          Freelance Web 3.0
         </a>
       </li>
     </ul>

@@ -19,8 +19,12 @@ const About = () => {
           <div className="z-10">
             <p className="headtext">Hi, I'm Sajadh</p>
             <p className="subtext">
-              Over the years, I developed my
-              skills to deliver dynamic web, mobile and blockchain solution.
+              Hi, I'm Sajadh. I’ve got a bachelor’s in English Language and
+              Literature and master’s degrees in both Computer Applications and
+              English Language and Literature. Right now, I’m working at a
+              robotics company, where I help build AI-powered apps, manage
+              mobile app projects with AI features, and lead technical teams to
+              create robotics and AI solutions.
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
