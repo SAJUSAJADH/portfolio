@@ -3,21 +3,21 @@ import { OrbitingCircles } from "./OrbitingCircles";
 export function Frameworks() {
   const skills = [
     "dart",
-    "mongodb_",
+    "gcp",
     "node",
     "flutter",
-    "firebase",
-    "ethereum",
+    "docker",
+    "postgre",
     "typescript",
     "git",
     "python",
-    "javascript",
-    "tensorflow",
+    "nestjs",
+    "pi",
     "react",
-    "ipfs",
-    "tailwindcss",
-    "vitejs",
-    "hardhat",
+    "arduino",
+    "c++",
+    "opencv",
+    "gazebo",
   ];
   return (
     <div className="relative flex h-[15rem] w-full flex-col items-center justify-center">
