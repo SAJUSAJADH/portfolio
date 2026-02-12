@@ -19,12 +19,7 @@ const About = () => {
           <div className="z-10">
             <p className="headtext">Hi, I'm Sajadh</p>
             <p className="subtext">
-              Hi, I'm Sajadh. I’ve got a bachelor’s in English Language and
-              Literature and master’s degrees in both Computer Applications and
-              English Language and Literature. Right now, I’m working at a
-              robotics company, where I help build AI-powered apps, manage
-              mobile app projects with AI features, and lead technical teams to
-              create robotics and AI solutions.
+              Hi, I'm Sajadh. I hold a Master’s in Computer Applications, complemented by a strong background in English Language and Literature. Currently, I specialize in Robotics and Backend Development, where I architect scalable infrastructure for AI-powered robots. I lead technical teams in designing robust backend systems and developing innovative robotics solutions, focusing on high-performance integration between hardware, AI, and server-side logic.
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
@@ -120,3 +115,4 @@ const About = () => {
 };
 
 export default About;
+
