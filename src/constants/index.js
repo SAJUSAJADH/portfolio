@@ -232,48 +232,41 @@ export const mySocials = [
   },
   {
     name: "Linkedin",
-    href: "https://www.linkedin.com/in/its-me-sajadh/",
+    href: "https://www.linkedin.com/in/sajadh-dev/",
     icon: "/assets/socials/linkedIn.svg",
   },
 ];
 
 export const experiences = [
   {
-    title: "Freelance Developer",
-    job: "Self-Employed",
-    date: "2022-2024",
+    title: "Senior Software Engineer",
+    job: "Techosa Robotics",
+    date: "06/2025 - Present",
     contents: [
-      "Created many MERN stack projects also integrated web3 technologies to them.",
-      "Continuously enhancing technical skills and expanding expertise in modern web development and back-end technologies.",
-      "Also, shifted focus towards scalable system designs and started mobile applications development.",
+      "Built a multi-functional Android robot, ELSA, with a team to assist users with queries in an educational setting.",
+      "Managed technical teams, overseeing project execution, resource allocation, and cross-functional collaboration to deliver innovative AI and robotic solutions.",
+      "Directed the development, updates, and management of the company’s official employee connect mobile application, using technologies like Flutter, Nest JS, Docker, Firebase, and Google Cloud Services, achieving 95% successful tracking of employment activities.",
     ],
   },
   {
     title: "Junior Software Engineer",
-    job: "Applications & AI Products",
-    date: "2024-2025",
+    job: "Techosa Robotics",
+    date: "07/2024 - 05/2025",
     contents: [
-      "Works in a robotics company specializing in the development of autonomous robots and AI powered solutions.",
-      "Contributed to the design and development of AI-driven applications, including computer vision, NLP, and custom model deployments.",
-      "Also built scalable and interactive mobile and web applications using React Native, Next.js, and Flutter.",
-      "Integrated AI functionalities such as object detection, emotion recognition, and voice command systems into real-time applications and consumer products.",
-      "Collaborated on embedded AI software for innovative products like smart glasses, AI assistants, and wearable tech with hardware dependencies like Raspberry Pi.",
-      "Implemented backend services using Node.js, Firebase, and Python-based APIs to support real-time data processing and cloud integration.",
+      "Contributed to building Samartha, a stationary android robot that recognizes emotions and responds to users, using AI tools like Transformers and Computer Vision.",
+      "Collaborated with a team to create Sentosa, a stationary android receptionist robot, to provide up-to-date institutional info to users, using GCP for quick responses.",
     ],
   },
   {
-    title: "Senior Software Engineer",
-    job: "Robots & AI Products",
-    date: "2025-Present",
-    contents: [
-      "Led the design and development of scalable, high-performance AI applications.",
-      "Directed the development, updates, and management of the company’s official employee connect mobile application, ensuring scalability and user engagement.",
-      "Lead teams for developing scalable and interactive mobile and web applications using React Native, Next.js, and Flutter.",
-      "Managed technical teams, overseeing project execution, resource allocation, and cross-functional collaboration to deliver innovative AI and robotics solutions.",
-      "Spearheaded mobile app development, integrating cutting-edge AI features.",
-      ""
-    ],
-  },
+  title: "Freelance Developer",
+  job: "Self-Employed",
+  date: "2022-2024",
+  contents: [
+    "Architected scalable backend solutions using NestJS, Node.js, and Docker, emphasizing clean architecture and maintainability.",
+    "Continuously enhanced technical skills in server-side development and containerization to build high-performance systems.",
+    "Expanded focus into robotics, experimenting with hardware integration and developing efficient control logic for autonomous systems.",
+  ],
+}
 ];
 export const journey = [
   {
@@ -302,16 +295,10 @@ export const journey = [
     content: `Completed "Advanced React" course by META.`,
   },
   {
-    title: "Ethereum Fundamentals program",
-    year: "2023",
-    content:
-      "Completed Ethereum fundamentals certification from Kerala Blockchain Academy.",
-  },
-  {
     title: "Freelance Developer",
     year: "2022-2024",
     content:
-      "Created many MERN stack projects also integrated web3 technologies to them.",
+      "Developing efficient control logic for autonomous systems.",
   },
   {
     title: "Software Engineer @ Techosa Robotics",
@@ -319,3 +306,4 @@ export const journey = [
     content: "Working as a software engineer at Techosa Robotics.",
   },
 ];
+
