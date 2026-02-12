@@ -2,7 +2,7 @@ import { FlipWords } from "./FlipWords";
 import { motion } from "motion/react";
 
 const HeroText = () => {
-  const words = ["Secure", "Modern", "Scalable"];
+  const words = ["Autonomous", "Intelligent", "Robust"];
   const variants = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },
@@ -47,7 +47,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Solutions.
+            Systems
           </motion.p>
         </div>
       </div>
@@ -89,7 +89,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Web & Mobile Apps
+            Robots & AI
           </motion.p>
         </div>
       </div>
@@ -98,3 +98,4 @@ const HeroText = () => {
 };
 
 export default HeroText;
+
