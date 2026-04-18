@@ -17,7 +17,7 @@ export function Frameworks() {
     "arduino",
     "c++",
     "opencv",
-    "gazebo",
+    "vitejs",
   ];
   return (
     <div className="relative flex h-[15rem] w-full flex-col items-center justify-center">
