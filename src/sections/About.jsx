@@ -19,7 +19,7 @@ const About = () => {
           <div className="z-10">
             <p className="headtext">Hi, I'm Sajadh</p>
             <p className="subtext">
-              Hi, I'm Sajadh. I hold a Master’s in Computer Applications, complemented by a strong background in English Language and Literature. Currently, I specialize in Robotics and Backend Development, where I architect scalable infrastructure for AI-powered robots. I lead technical teams in designing robust backend systems and developing innovative robotics solutions, focusing on high-performance integration between hardware, AI, and server-side logic.
+              Hi, I'm Sajadh. I hold a Master’s in Computer Applications, complemented by a strong background in English Language and Literature. I am currently working as a Senior Software Engineer at Techos Robotics.
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
@@ -40,12 +40,12 @@ const About = () => {
             />
             <Card
               style={{ rotate: "-30deg", top: "60%", left: "45%" }}
-              text="ROS2"
+              text="Next JS"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "90deg", bottom: "30%", left: "70%" }}
-              text="Raspberry Pi"
+              text="Flutter"
               containerRef={grid2Container}
             />
             <Card
@@ -55,7 +55,7 @@ const About = () => {
             />
             <Card
               style={{ rotate: "20deg", top: "10%", left: "38%" }}
-              text="Android"
+              text="Fast API"
               containerRef={grid2Container}
             />
             <Card
